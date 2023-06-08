@@ -1,3 +1,5 @@
+import { Formik, Field } from "formik";
+import * as yup from 'yup';
 import { useNavigate } from "react-router-dom";
 
 export const AboutPage = () => {
@@ -24,7 +26,7 @@ export const AboutPage = () => {
             <div>
               <div>
                 <label htmlFor='about'>About</label><br />
-                <input
+                <Field as='textarea'
                   className='input'
                   name='about'
                   onChange={handleChange}

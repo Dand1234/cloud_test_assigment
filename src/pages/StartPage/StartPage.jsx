@@ -1,4 +1,4 @@
-import { Formik } from "formik";
+import { Formik, Field } from "formik";
 import * as yup from 'yup';
 import { useNavigate } from "react-router-dom";
 
@@ -28,7 +28,7 @@ export const StartPage = () => {
             <div>
               <div>
                 <label htmlFor='email'>Email</label><br />
-                <input
+                <Field
                   className='input'
                   type='email'
                   name='email'
@@ -39,7 +39,7 @@ export const StartPage = () => {
               </div>
               <div>
                 <label htmlFor='number'>Phone number</label><br />
-                <input
+                <Field
                   className='input'
                   name='number'
                   onChange={handleChange}

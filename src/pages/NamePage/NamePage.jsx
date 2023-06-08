@@ -1,4 +1,4 @@
-import { Formik } from "formik";
+import { Formik, Field } from "formik";
 import * as yup from 'yup';
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +27,7 @@ export const NamePage = () => {
             <div>
               <div>
                 <label htmlFor='name'>Name</label><br />
-                <input
+                <Field
                   className='input'
                   name='name'
                   onChange={handleChange}
@@ -37,7 +37,7 @@ export const NamePage = () => {
               </div>
               <div>
                 <label htmlFor='surname'>Surname</label><br />
-                <input
+                <Field
                   className='input'
                   name='surname'
                   onChange={handleChange}
