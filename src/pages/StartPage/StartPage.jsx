@@ -41,11 +41,10 @@ export const StartPage = () => {
                 <label htmlFor='number'>Phone number</label><br />
                 <input
                   className='input'
-                  type='number'
                   name='number'
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.email}
+                  value={values.number}
                 />
               </div>
               <button onClick={() => {handleSubmit}}>next</button>

@@ -1,8 +1,16 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import { initValues } from "./initValues";
 
-const store = configureStore ({
-    preloadedState:,
-    reducer: {
-        user:
+export const userSlice = createSlice({
+    name: 'user',
+    initialState: initValues,
+    reducers:{
+        setUser: (_, action) => {
+            return action.payload
+          }
     }
 })
+
+export const { setUser } = userSlice.actions
+
+export const userReducer = userSlice.reducer
